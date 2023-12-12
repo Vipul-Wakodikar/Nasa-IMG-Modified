@@ -147,7 +147,7 @@ const HomePage = () => {
     <>
       <Header />
       <TrendingButtons />
-      <Slider />
+      {/* <Slider /> */}
       <div className={style.rootCardContainer}>
         <div className={style.cardContainer}>
           <DisplayCardRender />
