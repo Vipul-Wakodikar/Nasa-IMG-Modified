@@ -1,0 +1,1 @@
+export const getObjectValue = (a, b) => { a ? a : b}

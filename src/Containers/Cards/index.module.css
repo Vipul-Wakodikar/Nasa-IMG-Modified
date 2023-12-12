@@ -1,0 +1,12 @@
+.cardButtonStyle {
+  border: none;
+  background-color: transparent;
+  width: -webkit-fill-available;
+}
+.innerBorder {
+  padding: 5px;
+  border-radius: 5px;
+}
+.audioWidth {
+  width: -webkit-fill-available;
+}
