@@ -4,7 +4,8 @@ orignal source = https://images.nasa.gov
 
 ### please follow below steps to configure the project
 
-1. Node version = v20.3.1 & React version = 18.2.0 to make sure the project run please install above versions of node and React
+1. Node version = v20.3.1 & React version = 18.2.0 
+to make sure the project run in your local environment please install above versions of node and React
 2. get a secret key by signing up from the link https://api.nasa.gov
 3. create a .env file within src folder and add below key value pair
 ```
