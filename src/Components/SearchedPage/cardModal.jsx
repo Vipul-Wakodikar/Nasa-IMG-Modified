@@ -85,7 +85,7 @@ const cardModal = ({ isOpen, data, onClose, appElement, key }) => {
   return (
     <ReactModal isOpen={isOpen} appElement={appElement} key={key}>
       <div className={style.closeButton}>
-        <button onClick={onClose}>Close</button>
+        <button onClick={onClose}>X</button>
       </div>
       <RenderVideoData />
       <RenderImageData />
