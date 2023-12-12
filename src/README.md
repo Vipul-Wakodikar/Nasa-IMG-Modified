@@ -7,10 +7,10 @@ orignal source = https://images.nasa.gov
 1. Node version = v20.3.1 & React version = 18.2.0 to make sure the project run please install above versions of node and React
 2. get a secret key by signing up from the link https://api.nasa.gov
 3. create a .env file within src folder and add below key value pair
-
- >VITE_APOD_APIURL=https://api.nasa.gov/planetary/apod?api_key=
- >VITE_NASA_SECRET_KEY=/*enter the key that you will get after signingup*/
-
+```
+ VITE_APOD_APIURL=https://api.nasa.gov/planetary/apod?api_key=
+ VITE_NASA_SECRET_KEY=/*enter the key that you will get after signingup*/
+```
 4. please note that vite.config.js should look like below
 
 ```
