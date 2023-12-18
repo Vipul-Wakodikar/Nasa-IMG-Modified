@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./index.module.css";
 import ReactModal from "react-modal";
+import notFound from "../../assets/Image404NotFound.jpg";
 
 const HeaderModal = ({ isOpen, data, onClose, appElement }) => {
   if (!isOpen) return null;
@@ -13,7 +14,7 @@ const HeaderModal = ({ isOpen, data, onClose, appElement }) => {
         {data && (
           <>
             <div>
-              <img src={data.hdurl || "#"} alt={data.title} className={style.hdImgStyle} />
+              <img src={data.hdurl || notFound} alt={data.title} className={style.hdImgStyle} />
             </div>
             <div>
               <h3>{data.title}</h3>

@@ -23,14 +23,14 @@ const Card = ({ data, onClick }) => {
 
   return (
     <>
-      {mediaType.includes("audio") && searchValue !=="" ? (
+      {mediaType.includes("audio") && searchValue !== "" ? (
         <>
           <div>
             <audio className={style.audioWidth} controls>
               {audioData && <source src={audioData} type="audio/mp3" />}
               Your browser does not support the audio element.
             </audio>
-            <h3>{data.data.title}</h3>
+            <h3 className={style.titleStyle}>{data.data.title}</h3>
             <p>{data.data.date_created}</p>
           </div>
         </>
@@ -52,7 +52,7 @@ const Card = ({ data, onClick }) => {
                 alt={data.data.title}
               />
             )}
-            <h3>{data.data.title}</h3>
+            <h3 className={style.titleStyle}>{data.data.title}</h3>
             <p>{data.data.date_created}</p>
           </button>
         </>
