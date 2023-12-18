@@ -2,7 +2,6 @@ import React, { useEffect, useState, useMemo } from "react";
 import style from "./index.module.css";
 import Card from "../../Containers/Cards";
 import Modal from "./cardModal";
-import Header from "../Header";
 import { useSelector, useDispatch } from "react-redux";
 import { updateSearch } from "../../features/data/dataSlice";
 
@@ -16,10 +15,7 @@ const SearchedPage = () => {
   const dispatch = useDispatch();
 
   const fetchData = async () => {
-    let fetchUrl = `https://images-api.nasa.gov/search?q=newest&media_type=${mediaType}`;
-    if (searchValue) {
-      fetchUrl = `https://images-api.nasa.gov/search?q=${searchValue}&media_type=${mediaType}`;
-    }
+    let fetchUrl = `https://images-api.nasa.gov/search?q=${searchValue}&media_type=${mediaType}`;
     const api_url = await fetch(fetchUrl);
     const jsonData = await api_url.json();
     setCardData(jsonData.collection.items);
@@ -58,7 +54,6 @@ const SearchedPage = () => {
 
   return (
     <>
-      <Header />
       <PathRender />
       {cardData && cardData.length > 0 ? (
         <>

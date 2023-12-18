@@ -4,7 +4,7 @@ import ReactModal from "react-modal";
 
 const cardModal = ({ isOpen, data, onClose, appElement, key }) => {
   const [vidData, setVidData] = useState();
-
+  console.log('datas', data)
   useEffect(() => {
     const fetchData = async () => {
       const vidData = await fetch(data.href);

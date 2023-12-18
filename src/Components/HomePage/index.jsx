@@ -2,10 +2,10 @@ import React, { useEffect, useState, useMemo } from "react";
 import style from "./index.module.css";
 import Card from "../../Containers/Cards";
 import Modal from "../SearchedPage/cardModal";
-import Header from "../Header";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import Slider from "../../Containers/Slider";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const HomePage = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -73,7 +73,10 @@ const HomePage = () => {
 
   useEffect(() => {
     fetchData("https://images-assets.nasa.gov/recent.json").then((data) => {
-      window.sessionStorage.setItem("recent", JSON.stringify(data.collection.items));
+      window.sessionStorage.setItem(
+        "recent",
+        JSON.stringify(data.collection.items)
+      );
     });
   }, []);
 
@@ -91,7 +94,10 @@ const HomePage = () => {
   useEffect(() => {
     if (isPopular) {
       fetchData("https://images-assets.nasa.gov/popular.json").then((data) => {
-        window.sessionStorage.setItem("popular", JSON.stringify(data.collection.items));
+        window.sessionStorage.setItem(
+          "popular",
+          JSON.stringify(data.collection.items)
+        );
       });
     }
   }, [isPopular]); // Invalidate cache on isPopular change
@@ -134,18 +140,19 @@ const HomePage = () => {
         {cardData &&
           cardData.map((item) => (
             <div key={item.nasa_id} className={style.outerBorder}>
-              <Card key={item.nasa_id} data={item} onClick={() => openCardModal(item)} />
+              <Card
+                key={item.nasa_id}
+                data={item}
+                onClick={() => openCardModal(item)}
+              />
             </div>
           ))}
       </>
     );
   };
 
-
-
   return (
     <>
-      <Header />
       <TrendingButtons />
       {/* <Slider /> */}
       <div className={style.rootCardContainer}>
@@ -153,7 +160,12 @@ const HomePage = () => {
           <DisplayCardRender />
         </div>
       </div>
-      <Modal isOpen={openModal} data={modalData} onClose={handleCloseModal} appElement={document.getElementById("root")} />
+      <Modal
+        isOpen={openModal}
+        data={modalData}
+        onClose={handleCloseModal}
+        appElement={document.getElementById("root")}
+      />
     </>
   );
 };

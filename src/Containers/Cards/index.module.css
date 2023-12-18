@@ -2,6 +2,7 @@
   border: none;
   background-color: transparent;
   width: -webkit-fill-available;
+  color: white
 }
 .innerBorder {
   padding: 5px;
@@ -9,4 +10,8 @@
 }
 .audioWidth {
   width: -webkit-fill-available;
+}
+
+.titleStyle {
+  word-break: break-all;
 }

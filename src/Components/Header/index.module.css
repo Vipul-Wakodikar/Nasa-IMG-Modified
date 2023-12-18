@@ -2,9 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   padding: 10px 0px;
 }
+
+.headerBackground {
+  background-image: url('https://images.nasa.gov/images/landing_bg..jpg');
+  background-size: cover;
+  border-bottom: 2px solid black;
+}
+
 .searchBar {
   display: flex;
   justify-content: center;
@@ -15,6 +22,12 @@
   width: 60%;
   font-size: 1.6em;
 }
+
+.mediaType {
+  background-color: #15418c;
+  color: white;
+}
+
 @media only screen and (max-width: 1024px) {
   .hdImgStyle {
     max-width: -webkit-fill-available;
