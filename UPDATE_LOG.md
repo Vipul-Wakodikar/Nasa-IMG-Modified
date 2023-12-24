@@ -15,3 +15,19 @@
 3. Added styling to header by adding background Image
 4. Added asset folder to use default images this images are generated using Bing chat
 5. Test folder is created to test and implement new ways to render HomePage
+
+# Version 1.2
+
+1. Added Mosaic/ Masonry layout in the home page it resolves stretching or compression of displayed image. Mosaic layout also make webpage visually more appealing. also removed card presentation display 
+Before 
+![Alt text](image.png)
+
+After
+
+![Alt text](image-1.png)
+
+2. Created separate Masonry Layout with url as props or parameters so that it will be easier to display the webpage with mosaic layout
+
+3. Masonry Effect is acheived with the help of react-photo-album
+
+4. Added custom styles in Modal
