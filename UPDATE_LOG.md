@@ -19,10 +19,13 @@
 # Version 1.2
 
 1. Added Mosaic/ Masonry layout in the home page it resolves stretching or compression of displayed image. Mosaic layout also make webpage visually more appealing. also removed card presentation display 
-Before 
+
+
+## Before 
+
 ![Alt text](image.png)
 
-After
+## After
 
 ![Alt text](image-1.png)
 
