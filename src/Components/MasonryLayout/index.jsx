@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { addImageHeight } from "../Test2";
 import PhotoAlbum from "react-photo-album";
 import Modal from "./PreviewModal";
-import style from './index.module.css'
+import style from "./index.module.css";
 
-const MasonLayout = ({url}) => {
+const MasonLayout = ({ url }) => {
   const [recentData, setRecentData] = useState([]);
   const [displayData, setDisplayData] = useState([]);
   const [openModal, setOpenModal] = useState(false);
@@ -52,13 +52,13 @@ const MasonLayout = ({url}) => {
         console.error(error);
       });
   }, [recentData]);
+  console.log("first", displayData);
   return (
     <>
       <PhotoAlbum
         layout="masonry"
         photos={displayData}
         renderPhoto={({ photo, wrapperStyle, renderDefaultPhoto }) => {
-          // console.log('first', photo)
           return (
             <>
               <button
@@ -68,19 +68,34 @@ const MasonLayout = ({url}) => {
                     openCardModal(photo || null);
                   }
                 }}
+                style={wrapperStyle}
               >
-                {renderDefaultPhoto({ wrapped: true })}
+                {/* {renderDefaultPhoto({ wrapped: true })} */}
+                {photo.data[0].media_type === "video" && (<div
+                  className={
+                    photo.data[0].media_type === "video" && style.vidOverlay
+                  }
+                  style={wrapperStyle}
+                />
+                )}
+                <img
+                  src={photo.src}
+                  alt={photo.data[0].title}
+                  style={wrapperStyle}
+                />
               </button>
             </>
           );
         }}
       />
-      {openModal && modalData && (<Modal
-        isOpen={openModal}
-        data={modalData}
-        onClose={handleCloseModal}
-        appElement={document.getElementById("root")}
-      />)}
+      {openModal && modalData && (
+        <Modal
+          isOpen={openModal}
+          data={modalData}
+          onClose={handleCloseModal}
+          appElement={document.getElementById("root")}
+        />
+      )}
     </>
   );
 };

@@ -7,10 +7,10 @@ const HomePage = () => {
 
   const TrendingButtons = () => (
     <div className={style.buttonContainer}>
-      <button onClick={() => setIsPopular(false)} autoFocus>
+      <button onClick={() => setIsPopular(false)} className={!isPopular && style.activeButton} autoFocus>
         Newest Uploads
       </button>
-      <button onClick={() => setIsPopular(true)}>Trending & Popular</button>
+      <button onClick={() => setIsPopular(true)} className={isPopular && style.activeButton}>Trending & Popular</button>
     </div>
   );
     console.log('first', isPopular)

@@ -12,6 +12,11 @@
   border-bottom: 2px solid black;
 }
 
+.closeButton {
+  display: flex;
+  justify-content: end;
+}
+
 .searchBar {
   display: flex;
   justify-content: center;
