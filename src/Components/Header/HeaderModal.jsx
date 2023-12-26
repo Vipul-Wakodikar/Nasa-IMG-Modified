@@ -3,12 +3,19 @@ import style from "./index.module.css";
 import ReactModal from "react-modal";
 import notFound from "../../assets/Image404NotFound.jpg";
 
+const customStyles = {
+  content: {
+    backgroundColor: '#26282f',
+    color: 'white',
+  },
+};
+
 const HeaderModal = ({ isOpen, data, onClose, appElement }) => {
   if (!isOpen) return null;
   return (
-    <ReactModal isOpen={isOpen} appElement={appElement}>
-      <div>
-        <button onClick={onClose}>Close</button>
+    <ReactModal isOpen={isOpen} appElement={appElement} style={customStyles}>
+      <div className={style.closeButton}>
+        <button onClick={onClose}>X</button>
       </div>
       <div className={style.modalContent}>
         {data && (
