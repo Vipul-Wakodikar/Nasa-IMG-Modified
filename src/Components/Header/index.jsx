@@ -16,11 +16,12 @@ const Header = () => {
   const searchValue = useSelector((state) => state.data.value);
 
   const fetchData = async () => {
-    const api_url = await fetch(
-      `${import.meta.env.VITE_APOD_APIURL}${
-        import.meta.env.VITE_NASA_SECRET_KEY
-      }`
-    );
+    // const api_url = await fetch(
+    //   `${import.meta.env.VITE_APOD_APIURL}${
+    //     import.meta.env.VITE_NASA_SECRET_KEY
+    //   }`
+    // );
+    const api_url = await fetch("http://localhost:5000/apod")
     const jsonData = await api_url.json();
     setCardData(jsonData);
   };
