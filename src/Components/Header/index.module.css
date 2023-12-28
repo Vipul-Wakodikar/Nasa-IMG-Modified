@@ -1,0 +1,50 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0px;
+}
+
+.headerBackground {
+  background-image: url('https://images.nasa.gov/images/landing_bg..jpg');
+  background-size: cover;
+  border-bottom: 2px solid black;
+}
+
+.closeButton {
+  display: flex;
+  justify-content: end;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+
+.searchBar input {
+  width: 60%;
+  font-size: 1.6em;
+}
+
+.mediaType {
+  background-color: #15418c;
+  color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+  .hdImgStyle {
+    max-width: -webkit-fill-available;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .modalContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+  .hdImgStyle {
+    width: 100%;
+  }
+}

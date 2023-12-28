@@ -1,0 +1,84 @@
+.rootCardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+    width: 100%;
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .buttonContainer button {
+    background-color: #4c4d53;
+    color: white;
+    border:none;
+    margin: 5px;
+    padding: 7px 15px;
+  }
+
+  .activeButton {
+    border:2px solid red !important;
+  }
+
+  .displayItems {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center; /* Center individual cards within each column */
+    overflow-x: hidden;
+  }
+  .videoContainer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .outerBorder {
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 5px;
+    width: 252px;
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .hdImgStyle {
+      max-width: -webkit-fill-available;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .modalContent {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+    }
+    .hdImgStyle {
+      width: 100%;
+    }
+  }
+  
+  
+  @media only screen and (min-width: 796px) {
+    .cardContainer {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  @media only screen and (max-width: 796px) and (min-width: 500px) {
+    .cardContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .cardContainer {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
